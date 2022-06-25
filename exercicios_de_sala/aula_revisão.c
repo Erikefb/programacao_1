@@ -94,3 +94,41 @@ scanf("%d", &M);
 }
 
 
+/*Algorítmo:
+variáveis
+float T1 = 0, T2 = 0, volta, tv
+Início: 
+Para volta = 1 até volta = 5:
+leio tempo da 'volta' em tv
+T1 = T1 + tv
+FIM: PARA
+Para volta =1 até volta =5 
+leio tempo da volta em tv 
+T2 =T2 +tv
+FIM: PARA
+Se (T1 < T2): Estudante1 ganhou
+Senão se (T1 == T2) : Empate 
+senão: Estudante2 ganhou.
+*/
+
+#include <stdio.h>
+int main(){
+
+float T1=0, T2=0, volta, tv;
+
+ for (volta=1; volta<=5; volta++){
+scanf("%f", &tv);
+T1 = T1+tv;
+}
+  for (volta=1; volta<=5; volta++){
+scanf("%f", &tv);
+T2 = T2+tv;
+}
+if (T1 < T2)
+printf("O estudante 1 ganhou!");
+else if (T1 == T2)
+printf("Empate!");
+else 
+printf("O estudante 2 ganhou!");
+}
+
