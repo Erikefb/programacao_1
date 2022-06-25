@@ -30,3 +30,67 @@ else{
 printf("Não está equilibrado!\n");}
 
 }
+
+
+
+/*Algorítmo:
+Variáveis:
+int N, M, vez = 0
+Início:
+Ler valor de N e M
+Escrever o 'total N' na tela, enquanto N > 0:
+Se vez == 0
+escreve 'Paula -' 
+vez <-- 1
+Senão
+escreve 'Carlos -'
+vez <-- 0
+FIM: SE
+
+N-= M (N = N-M)
+Se N < 0:
+Imprime 0
+Senão 
+Imprime N
+FIM: ENQUANTO
+
+Se vez == 0:
+imrpime Carlos ganhou
+Senão
+Imprime Paula ganhou
+*/
+#include <stdio.h>
+int main(){
+
+int N, M, vez = 0;
+
+printf("Escreva o número de bolinhas de chocolate:\n");
+scanf("%d", &N);
+printf("Escreva o número de bolinhas de chocolate que irão comer:\n");
+scanf("%d", &M);
+
+
+	while ( N>0 ){
+		if (vez == 0){
+			printf("Paula  -  ");
+			vez = 1;}
+		else{
+			printf("Carlos -  ");
+			vez = 0;}
+	
+		N = N-M;
+		if( N<0 ){
+			printf("0\n");}
+		else{
+			printf("%d\n", N);}
+}
+		if( vez == 0)
+			printf("Carlos ganhou\n");
+		else
+			printf("Paula ganhou\n");
+
+
+
+}
+
+
